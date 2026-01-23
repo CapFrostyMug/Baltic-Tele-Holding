@@ -147,7 +147,7 @@ onMounted(() => {
         </div>
 
         <div v-if="products.length" class="overflow-x-auto">
-            <table class="min-w-full text-sm border bg-white">
+            <table class="min-w-full text-sm border border-slate-200 rounded-md overflow-hidden bg-white">
                 <thead class="bg-gray-50">
                 <tr>
                     <th class="border px-2 py-1 text-left">ID</th>
@@ -161,6 +161,7 @@ onMounted(() => {
                 <tr
                     v-for="product in products"
                     :key="product.id"
+                    class="hover:bg-slate-50 transition-colors"
                 >
                     <td class="border px-2 py-1">
                         {{ product.id }}
